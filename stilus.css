@@ -1,0 +1,69 @@
+body {
+    background-color: lightyellow; /* A 'silk' nem alapértelmezett színnév, lightyellow-ra cseréltem a videó alapján */
+}
+
+.termekek:hover {
+    background: red;
+    cursor: pointer;
+}
+
+.termekek {
+    text-align: left;
+    font-weight: bolder;
+}
+
+div {
+    border: 5px solid brown;
+    border-radius: 20px 5px;
+    padding: 10px;
+}
+
+th {
+    font-size: 1.5em;
+    border-bottom: 2px solid brown;
+}
+
+.kiskep {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+#nagykep {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#kinalat {
+    display: inline-block;
+    height: 400px;
+    width: 55%;
+    overflow: auto;
+}
+
+#kep {
+    width: 40%;
+    height: 400px;
+    float: right;
+}
+
+#kosar {
+    display: block;
+    height: 150px;
+    overflow: auto;
+    margin: 20px auto;
+    width: 90%;
+    clear: both;
+}
+
+table {
+    width: 100%;
+    margin: auto;
+}
+
+td {
+    text-align: center;  
+    border: 1px dotted brown;
+    padding: 5px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Webáruház</title>
+    <link rel="stylesheet" href="stilus.css">
+    <script src="kod.js"></script>
+</head>
+
+<body>
+    <div id="kinalat">
+        <table>
+            <tr>
+                <th>Termék megnevezése</th>
+                <th>Termék képe</th>
+            </tr>
+            <tr class="termekek" onclick="kivalaszt('HyperX Predator 16GB RAM')">
+                <td onmouseover="nagyitKep('RAM.jpg')" onmouseout="visszaKep()">HyperX Predator 16GB (4x4GB) DDR4 3200MHz</td>
+                <td><img class="kiskep" src="RAM.jpg"></td>
+            </tr>
+            <tr class="termekek" onclick="kivalaszt('LG Gamer Monitor')">
+                <td onmouseover="nagyitKep('monitor.jpg')" onmouseout="visszaKep()">LG Gamer Monitor</td>
+                <td><img class="kiskep" src="monitor.jpg"></td>
+            </tr>
+            <tr class="termekek" onclick="kivalaszt('WD Red 2TB HDD')">
+                <td onmouseover="nagyitKep('HDD.jpg')" onmouseout="visszaKep()">WD Red 3.5" 2TB 5400rpm SATA3</td>
+                <td><img class="kiskep" src="HDD.jpg"></td>
+            </tr>
+            <tr class="termekek" onclick="kivalaszt('Samsung 970 EVO SSD')">
+                <td onmouseover="nagyitKep('SSD.jpg')" onmouseout="visszaKep()">Samsung 970 EVO 500GB M.2 PCIe</td>
+                <td><img class="kiskep" src="SSD.jpg"></td>
+            </tr>
+            <tr class="termekek" onclick="kivalaszt('Chieftec Tápegység')">
+                <td onmouseover="nagyitKep('tap.jpg')" onmouseout="visszaKep()">Chieftec Smart 500W (GPS-500A8)</td>
+                <td><img class="kiskep" src="tap.jpg"></td>
+            </tr>
+        </table>    
+    </div>
+
+    <div id="kep">
+        <img id="nagykep" src="ures.jpg">
+    </div>
+
+    <div id="kosar">
+        <h2>Kosár tartalma:</h2>
+        <ul id="kosarLista"></ul>
+    </div>  
+</body>
+</html>
