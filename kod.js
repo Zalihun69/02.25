@@ -1,23 +1,31 @@
 function nagyitKep(melyikKep) {
-    // Kicseréli a nagy kép forrását a kiválasztottra
     document.getElementById("nagykep").src = melyikKep;
 }
 
 function visszaKep() {
-    // Visszaállítja az alapértelmezett "kérdőjeles" képet
     document.getElementById("nagykep").src = "ures.jpg";
 }
 
-function kivalaszt(melyikTermek) {
-    // Bekéri a darabszámot egy felugró ablakban
-    let darab = prompt("Hány darabot szeretne?", "1");
+function szamol(index) {
+    // Adott sor kiszámítása
+    let ar = document.getElementById("ar_" + index).innerText;
+    let darab = document.getElementById("db_" + index).value;
     
-    if (darab != null && darab != "" && !isNaN(darab)) {
-        // Létrehozunk egy új listaelem-et a kosárhoz
-        let ujElem = document.createElement("li");
-        ujElem.textContent = darab + " db x " + melyikTermek;
-        
-        // Hozzáadjuk a kosár div-ben lévő listához (ha van) vagy csak a div-hez
-        document.getElementById("kosar").appendChild(ujElem);
+    // Ha üres vagy érvénytelen a bemenet, legyen 0
+    if (darab == "" || darab < 0) {
+        darab = 0;
     }
+
+    let reszosszeg = parseInt(ar) * parseInt(darab);
+    document.getElementById("resz_" + index).innerText = reszosszeg;
+
+    // Teljes végösszeg újraszámolása (összesen 5 termék van: 0-tól 4-ig)
+    let osszesen = 0;
+    for (let i = 0; i < 5; i++) {
+        let aktualisResz = document.getElementById("resz_" + i).innerText;
+        osszesen += parseInt(aktualisResz);
+    }
+
+    // Kosár frissítése
+    document.getElementById("vegosszeg").innerText = osszesen;
 }
